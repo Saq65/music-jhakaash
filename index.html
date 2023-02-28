@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        body {
+            background-color: rgb(199, 194, 194);
+        }
+
+        .header {
+            background-color: rgb(155, 107, 19);
+            height: 45px;
+            border: 2px inset black;
+        }
+
+        h1 {
+            font-weight: 400;
+            font-variant: small-caps;
+            color: white;
+            font-style: oblique;
+            text-rendering: optimizeSpeed;
+            letter-spacing: 2px;
+            word-spacing: 16px;
+            text-shadow: 2px 2px rgba(0, 0, 0, 0.25), 6px 6px 6px rgba(0, 0, 0, 0.25), 8px 8px 8px rgba(0, 0, 0, 0.25);
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+
+        h2 {
+            position: relative;
+            left: 8px;
+            top: 10px;
+            /*text-indent: 40px;*/
+            font-size: larger;
+            font-family: monospace;
+            background-color: rgb(170, 118, 21);
+            color: white;
+            text-shadow: 2px 2px 2px black, 6px 6px 6px rgba(0, 0, 0, 0.25);
+            text-align: center;
+            border-radius: 20px;
+            width: 300px;
+            padding: 3px;
+            border: 1px outset black;
+        }
+
+        #music {
+            font-size: 24px;
+            position: relative;
+            right: 6px;
+            color: wheat;
+        }
+
+        #music2 {
+            color: wheat;
+            position: relative;
+            right: 7px;
+        }
+
+        #hindi {
+            width: 200px;
+            height: 180px;
+            position: relative;
+            left: 20px;
+            border: 1px outset black;
+            background-color: rgb(197, 137, 26);
+            border-radius: 4px;
+        }
+
+        audio {
+            position: relative;
+            top: 50px;
+            height: 30px;
+            border: 1px solid rgba(0, 0, 0, 0.25);
+            border-radius: 20px;
+            background-color: black;
+            width: 196px;
+        }
+
+        .container2 {
+            display: flex;
+            justify-content: space-evenly;
+        }
+
+        .hbtn {
+            position: relative;
+            top: 50px;
+            left: 5px;
+        }
+
+        @media screen and (max-width:480px) {
+
+
+            .header {
+                width: 100%;
+            }
+
+            h1 {
+                width: 100%;
+            }
+
+            .container {
+                width: 100%;
+                padding-right: 230px;
+
+            }
+
+            .container2 {
+                visibility: visible;
+                display: block;
+                width: 100%;
+                padding: 0;
+                margin-right: 200px;
+            }
+            hr {
+                width: 100%;
+
+            }
+
+            h2 {
+                width: 60%;
+            }
+
+            audio {
+                position: absolute;
+                top: 4px;
+                margin-left: 4px;
+            }
+            table{
+                visibility: hidden;
+            }
+            #hindi {
+                height: 70px;
+                width: 210px;
+                padding: 10px;
+                margin: 20px;
+            }
+            div#hindi li{
+                visibility: visible;
+                background-color: aliceblue;text-align: center;
+                color: black;box-shadow: 10px 10px 10px khaki inset;
+                font-weight: 500;font-family: cursive;
+                cursor: pointer;
+            }
+            .hbtn {
+                position: absolute;
+                top: 42px;
+                width: 220px;
+                left: 20px;
+            }
+
+        }
+
+        a {
+            position: relative;
+            left: 26px;
+            text-decoration: none;
+            color: rgba(0, 0, 0, 0.85);
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        button {
+            border: 1px outset black;
+        }
+        
+        button:hover {
+            border: 1.6px outset wheat;
+            background-color: black;
+            box-shadow: 0px 0px 0px darkgoldenrod, 2px 2px 2px darkgoldenrod;
+            direction: rtl;
+            color: white;
+            cursor: pointer;
+            font-size: medium;
+        }
+        li{
+            visibility: hidden;
+        }
+        h3 {
+            visibility: hidden;
+        }
+    </style>
+    <title>Music project</title>
+</head>
+
+<body>
+    <div class="header">
+        <h1 align="center"><i id="music" class="fa-solid fa-music"></i>Music <i id="music2"
+                class="fa-solid fa-drum"></i>JhakAash</h1>
+    </div>
+    <hr>
+    <div class="container">
+        <h2 style="cursor: pointer;" title='Hindi song'>Hindi Song</h2>
+        <br>
+        <hr>
+        <div class="container2">
+            <div id="hindi">
+
+                <table style="border-collapse: collapse;position: relative;
+             top: 35px;left: 10px;background-color: lavender;cursor: pointer;">
+                    <tr>
+                        <td title="song">Song:</td>
+                        <th title="hasi ban gaye">Hasi Ban Gaye</th>
+                    </tr>
+                    <tr>
+                        <td>Singer:</td>
+                        <td title="Ami mishra">Amit Mishra</td>
+                    </tr>
+                    <tr>
+                        <td>Movie:</td>
+                        <td title="hamari adhuri kahani">hamari adhuri kahani</td>
+                    </tr>
+                </table>
+                <li type="square" style="position: relative;top: -19px;" title="hasi ban gaye">Hasi Ban gaye</li>
+                <audio id="Hasi" controls src="Hasi ban gye song by amit mishra.mp3"></audio>
+                <div class="hbtn">
+                    <button onclick="document.getElementById('Hasi').play()">Play</button>
+                    <button onclick="document.getElementById('Hasi').pause()">Pause</button>
+                    <button onclick="document.getElementById('Hasi').volume+=.1">+volume</button>
+                    <button onclick="document.getElementById('Hasi').volume-=.1">-volume</button>
+                </div>
+            </div>
+            <div id="hindi">
+                <table style="border-collapse: collapse;position: relative;
+            top: 35px;left: 30px;background-color: lavender;cursor: pointer;">
+                    <tr>
+                        <td title="song">Song:</td>
+                        <th title="Ik Mulaqaat">Ik Mulaqaat</th>
+                    </tr>
+                    
+                    <tr>
+                        <td>Singer:</td>
+                        <td title="Altamash Faridi">Altamash Faridi</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Movie:</td>
+                        <td title="Dream girl">Dream girl</td>
+                    </tr>
+                   
+                </table>
+                <li type="square" title="Ik Mulaaqat">Ik Mulaaqat</li>
+                <audio id="khudaya" controls src="Ik Mulaqaat Song Dream Girl.mp3"></audio>
+                <div class="hbtn">
+                    <button onclick="document.getElementById('khudaya').play()">Play</button>
+                    <button onclick="document.getElementById('khudaya').pause()">Pause</button>
+                    <button onclick="document.getElementById('khudaya').volume+=.1">+volume</button>
+                    <button onclick="document.getElementById('khudaya').volume-=.1">-volume</button>
+                </div>
+            </div>
+            <div id="hindi">
+                <table style="border-collapse: collapse;position: relative;
+        top: 35px;left: 10px;background-color: lavender;cursor: pointer;">
+                    <tr>
+                        <td title="song">Song:</td>
+                        <th title="hasi ban gaye">khudaya khair</th>
+                    </tr>
+                    <tr>
+                        <td>Singer:</td>
+                        <td title="Soham,Pritam">Soham & Monali</td>
+                    </tr>
+                    <tr>
+                        <td>Movie:</td>
+                        <td title="Billu">Billu</td>
+                    </tr>
+                </table>
+                <li type="square" title="khudaya khair">Khudaya khair</li>
+                <audio id="khair" controls src="07. Khudaya Khair.mp3"></audio>
+                <div class="hbtn">
+                    <button onclick="document.getElementById('khair').play()">Play</button>
+                    <button onclick="document.getElementById('khair').pause()">Pause</button>
+                    <button onclick="document.getElementById('khair').volume+=.1">+volume</button>
+                    <button onclick="document.getElementById('khair').volume-=.1">-volume</button>
+                </div>
+            </div>
+            <div id="hindi">
+                <table style="border-collapse: collapse;position: relative;
+    top: 35px;left: 10px;background-color: lavender;cursor: pointer;">
+                    <tr>
+                        <td title="song">Song:</td>
+                        <th title="Phir Mulaaqat">Phir Mulaaqat</th>
+                    </tr>
+                    <tr>
+                        <td>Singer:</td>
+                        <td title="Jubin nautiyal">Jubin Nautiyal</td>
+                    </tr>
+                    <tr>
+                        <td>Movie:</td>
+                        <td title="cheat india">Cheat India</td>
+                    </tr>
+                </table>
+                <li type="square" title="phir Mulaaqat">Phir Mulaaqat</li>
+                <audio id="phir" controls src="Phir Mulaaqat - Cheat India (1).mp3"></audio>
+                <div class="hbtn">
+                    <button onclick="document.getElementById('phir').play()">Play</button>
+                    <button onclick="document.getElementById('phir').pause()">Pause</button>
+                    <button onclick="document.getElementById('phir').volume+=.1">+volume</button>
+                    <button onclick="document.getElementById('phir').volume-=.1">-volume</button>
+                </div>
+            </div>
+            <div id="hindi">
+
+
+                <table style="border-collapse: collapse;position: relative;
+    top: 35px;left: 10px;background-color: lavender;cursor: pointer;">
+                    <tr>
+                        <td title="song">Song:</td>
+                        <th title="Arziyaan">Arziyaan</th>
+                    </tr>
+                    <tr>
+                        <td>Singer:</td>
+                        <td title="Vikrant & Aishwarya">Vikrant & Aishwarya</td>
+                    </tr>
+                    <tr>
+                        <td>Movie:</td>
+                        <td title="Jigariyaa">Jigariyaa</td>
+                    </tr>
+                </table>
+                <li type="square" style="position: relative;top: -16px;" title="Arziyaan">Arziyaan</li>
+                <audio id="Arziyaan" controls src="Arziyaan Jigariyaa 128 Kbps.mp3"></audio>
+                <div class="hbtn">
+                    <button onclick="document.getElementById('Arziyaan').play()">Play</button>
+                    <button onclick="document.getElementById('Arziyaan').pause()">Pause</button>
+                    <button onclick="document.getElementById('Arziyaan').volume+=.1">+volume</button>
+                    <button onclick="document.getElementById('Arziyaan').volume-=.1">-volume</button>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+    <hr>
+    <hr>
+    <div class="container">
+        <h2 title="Punjabi Song" style="cursor: pointer;">Punjabi Song</h2>
+        <br>
+        <hr>
+        <div class="container2">
+            <div id="hindi">
+                <table style="border-collapse: collapse;position: relative;
+                 top: 35px;left: 20px;background-color: lavender;cursor: pointer;">
+                    <tr>
+                        <td title="song">Song:</td>
+                        <th title="Dabda Kithe Aa">Dabda Kithe Aa</th>
+                    </tr>
+                    <tr>
+                        <td>Singer:</td>
+                        <td title="R nait">R nait</td>
+                    </tr>
+                    <tr>
+                        <td>Album:</td>
+                        <td title="Dabda Kithe Aa">Dabda Kithe Aa</td>
+                    </tr>
+                </table>
+                <li type="square" title="Dabda kithe Aa">Dabda kithe aa</li>
+                <audio id="Dabda" controls src="Dabda Kithe Aa.mp3"></audio>
+                <div class="hbtn">
+                    <button onclick="document.getElementById('Dabda').play()">Play</button>
+                    <button onclick="document.getElementById('Dabda').pause()">Pause</button>
+                    <button onclick="document.getElementById('Dabda').volume+=.1">+volume</button>
+                    <button onclick="document.getElementById('Dabda').volume-=.1">-volume</button>
+                </div>
+            </div>
+            <div id="hindi">
+                <table style="border-collapse: collapse;position: relative;
+                top: 35px;left: 30px;background-color: lavender;cursor: pointer;">
+                    <tr>
+                        <td title="song">Song:</td>
+                        <th title="Koka Song">Koka Song</th>
+                    </tr>
+                    <tr>
+                        <td>Singer:</td>
+                        <td title="Diljit Dosanjh">Diljit Dosanjh</td>
+                    </tr>
+                    <tr>
+                        <td>Movie:</td>
+                        <td>Unknown</td>
+                    </tr>
+                </table>
+                <li type="square" title="Koka song">Koka song</li>
+                <audio id="koka" controls src="koka song.mp3"></audio>
+                <div class="hbtn">
+                    <button onclick="document.getElementById('koka').play()">Play</button>
+                    <button onclick="document.getElementById('koka').pause()">Pause</button>
+                    <button onclick="document.getElementById('koka').volume+=.1">+volume</button>
+                    <button onclick="document.getElementById('koka').volume-=.1">-volume</button>
+                </div>
+            </div>
+            <div id="hindi">
+                <table style="border-collapse: collapse;position: relative;
+            top: 35px;left: 1px;background-color: lavender;cursor: pointer;">
+                    <tr>
+                        <td title="song">Song:</td>
+                        <th title="Naiyo lagda dil tere bina">Naiyo lagda..</th>
+                    </tr>
+                    <tr>
+                        <td>Singer:</td>
+                        <td title="Kamal Khan">Kamal Khan</td>
+                    </tr>
+                    <tr>
+                        <td>Movie:</td>
+                        <td title="kisi ka bhai kisi ki jaan">kisi ka bhai kisi ki jaan</td>
+                    </tr>
+                </table>
+                <li type="square" style="position: relative;top: -15px;" title="Naiyo-Lagda-Dil-Tere-Bina">Naiyo lagda</li>
+                <audio id="Naiyo" controls src="Naiyo-Lagda-Dil-Tere-Bina(PaglaSongs).mp3"></audio>
+                <div class="hbtn">
+                    <button onclick="document.getElementById('Naiyo').play()">Play</button>
+                    <button onclick="document.getElementById('Naiyo').pause()">Pause</button>
+                    <button onclick="document.getElementById('Naiyo').volume+=.1">+volume</button>
+                    <button onclick="document.getElementById('Naiyo').volume-=.1">-volume</button>
+                </div>
+            </div>
+            <div id="hindi">
+                <table style="border-collapse: collapse;position: relative;
+        top: 35px;left: 20px;background-color: lavender;cursor: pointer;">
+                    <tr>
+                        <td title="song">Song:</td>
+                        <th title="Approach">Approach</th>
+                    </tr>
+                    <tr>
+                        <td>Singer:</td>
+                        <td title="Sidhu moosewala">Sidhu moosewala</td>
+                    </tr>
+                    <tr>
+                        <td>Album:</td>
+                        <td title="Approach">Approach</td>
+                    </tr>
+                </table>
+                <li type="square" title="Approach">Approach</li>
+                <audio id="Approach" controls src="Approach - DjBaap.Net.mp3"></audio>
+                <div class="hbtn">
+                    <button onclick="document.getElementById('Approach').play()">Play</button>
+                    <button onclick="document.getElementById('Approach').pause()">Pause</button>
+                    <button onclick="document.getElementById('Approach').volume+=.1">+volume</button>
+                    <button onclick="document.getElementById('Approach').volume-=.1">-volume</button>
+                </div>
+            </div>
+            <div id="hindi">
+                <table style="border-collapse: collapse;position: relative;
+        top: 35px;left: 20px;background-color: lavender;cursor: pointer;">
+                    <tr>
+                        <td title="song">Song:</td>
+                        <th title="Haaye Ni">Haaye Ni</th>
+                    </tr>
+                    <tr>
+                        <td>Singer:</td>
+                        <td title="Sartaj virk">Sartaj virk</td>
+                    </tr>
+                    <tr>
+                        <td>Movie:</td>
+                        <td>Unknown</td>
+                    </tr>
+                </table>
+                <li type="square" title="Haaye ni">Haaye ni</li>
+                <audio id="Haaye" controls src="Haaye Ni(PagalWorld.com.se).mp3"></audio>
+                <div class="hbtn">
+                    <button onclick="document.getElementById('Haaye').play()">Play</button>
+                    <button onclick="document.getElementById('Haaye').pause()">Pause</button>
+                    <button onclick="document.getElementById('Haaye').volume+=.1">+volume</button>
+                    <button onclick="document.getElementById('Haaye').volume-=.1">-volume</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <hr>
+    <hr>
+    <div class="container">
+        <h2>English Song</h2>
+        <br>
+        <hr>
+        <div class="container2">
+            <div id="hindi">
+                <table style="border-collapse: collapse;position: relative;
+                     top: 35px;left: 20px;background-color: lavender;cursor: pointer;">
+                    <tr>
+                        <td title="song">Song:</td>
+                        <th title="This is America">This is America</th>
+                    </tr>
+                    <tr>
+                        <td>Singer:</td>
+                        <td title="Donald Glover">Donald Glover</td>
+                    </tr>
+                    <tr>
+                        <td>Movie:</td>
+                        <td title="This is America">This is America</td>
+                    </tr>
+                </table>
+                <li type="square" title="this is america">This is america</li>
+                <audio id="America" controls src="This is America.mp3"></audio>
+                <div class="hbtn">
+                    <button onclick="document.getElementById('America').play()">Play</button>
+                    <button onclick="document.getElementById('America').pause()">Pause</button>
+                    <button onclick="document.getElementById('America').volume+=.1">+volume</button>
+                    <button onclick="document.getElementById('America').volume-=.1">-volume</button>
+                </div>
+            </div>
+            <div id="hindi">
+                <table style="border-collapse: collapse;position: relative;
+                    top: 35px;left: 10px;background-color: lavender;cursor: pointer;">
+                    <tr>
+                        <td title="song">Song:</td>
+                        <th title="Gangsta Pradise">Gangsta Pradise</th>
+                    </tr>
+                    <tr>
+                        <td>Singer:</td>
+                        <td title="coolio">coolio</td>
+                    </tr>
+                    <tr>
+                        <td>Album:</td>
+                        <td title="Gangsta Pradise">Gangsta Pradise</td>
+                    </tr>
+                </table>
+                <li type="square" title="Gangsta Pradise">Gangsta Pradise</li>
+                <audio id="coolio" autoplay="autoplay" loop="5" controls src="Gangsta's-Paradise(PagalWorld).mp3"></audio>
+                <div class="hbtn">
+                    <button onclick="document.getElementById('coolio').play()">Play</button>
+                    <button onclick="document.getElementById('coolio').pause()">Pause</button>
+                    <button onclick="document.getElementById('coolio').volume+=.1">+volume</button>
+                    <button onclick="document.getElementById('coolio').volume-=.1">-volume</button>
+                </div>
+            </div>
+            <div id="hindi">
+                <table style="border-collapse: collapse;position: relative;
+                top: 35px;left: 10px;background-color: lavender;cursor: pointer;">
+                    <tr>
+                        <td title="song">Song:</td>
+                        <th title="hasi ban gaye">Shape of you</th>
+                    </tr>
+                    <tr>
+                        <td>Singer:</td>
+                        <td title="Ed sheeran">Ed sheeran</td>
+                    </tr>
+                    <tr>
+                        <td>Album:</td>
+                        <td title="Shape of you">Shape of you</td>
+                    </tr>
+                </table>
+                <li type="square" title="Ed_Sheeran_-_Shape_Of_You">Shape of you</li>
+                <audio id="Shape" controls src="Ed_Sheeran_-_Shape_Of_You.mp3"></audio>
+                <div class="hbtn">
+                    <button onclick="document.getElementById('Shape').play()">Play</button>
+                    <button onclick="document.getElementById('Shape').pause()">Pause</button>
+                    <button onclick="document.getElementById('Shape').volume+=.1">+volume</button>
+                    <button onclick="document.getElementById('Shape').volume-=.1">-volume</button>
+                </div>
+            </div>
+            <div id="hindi">
+                <table style="border-collapse: collapse;position: relative;
+            top: 35px;left: 35px;background-color: lavender;cursor: pointer;">
+                    <tr>
+                        <td title="song">Song:</td>
+                        <th title="hasi ban gaye">Friends</th>
+                    </tr>
+                    <tr>
+                        <td>Singer:</td>
+                        <td title="Ami mishra">Marshmello</td>
+                    </tr>
+                    <tr>
+                        <td>Album:</td>
+                        <td title="Friends">Friends</td>
+                    </tr>
+                </table>
+                <li type="square" title="Friends">Friends</li>
+                <audio id="frnd" controls src="Friends(PagalWorld).mp3"></audio>
+                <div class="hbtn">
+                    <button onclick="document.getElementById('frnd').play()">Play</button>
+                    <button onclick="document.getElementById('frnd').pause()">Pause</button>
+                    <button onclick="document.getElementById('frnd').volume+=.1">+volume</button>
+                    <button onclick="document.getElementById('frnd').volume-=.1">-volume</button>
+                </div>
+            </div>
+            <div id="hindi">
+                <table style="border-collapse: collapse;position: relative;
+            top: 35px;left: 10px;background-color: lavender;cursor: pointer;">
+                    <tr>
+                        <td title="song">Song:</td>
+                        <th title="Why not me">Why not me</th>
+                    </tr>
+                    <tr>
+                        <td>Singer:</td>
+                        <td title="Enrique iglesias">Enrique iglesias</td>
+                    </tr>
+                    <tr>
+                        <td>Album:</td>
+                        <td title="Why not me">Why not me</td>
+                    </tr>
+                </table>
+                <li type="square" title="why not me">Why not me</li>
+                <audio id="why" muted controls src="Enrique_Iglesias_-_Why_Not_Me_Lyrics_Video.mp3"></audio>
+                <div class="hbtn">
+                    <button onclick="document.getElementById('why').play()">Play</button>
+                    <button onclick="document.getElementById('why').pause()">Pause</button>
+                    <button onclick="document.getElementById('why').volume+=.1">+volume</button>
+                    <button onclick="document.getElementById('why').volume-=.1">-volume</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <hr>
+
+    <div class="footer">
+        <b style="text-decoration: overline;">CONTECT WITH US:</b><br>
+        <hr>
+        <a href="https://www.facebook.com">Facebook</a> <br>
+        <a href="mailto:saklainshaikh974@gmail.com">E-mail</a> <br>
+        <a href="https://www.instagram.com">Instagram</a> <br>
+        <a href="#music">Back to the top</a>
+    </div>
+    
+    <hr>
+    <script src="https://kit.fontawesome.com/869299c5af.js" crossorigin="anonymous"></script>
+</body>
+
+</html>
